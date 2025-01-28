@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae - Científico de Datos - Karen Valverde</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            background-color: #f9e4f2;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #d36e88;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 0;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-header img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-right: 30px;
+        }
+
+        .profile-header h2 {
+            font-size: 28px;
+            color: #d36e88;
+        }
+
+        .profile-header p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        .section-title {
+            color: #d36e88;
+            font-size: 22px;
+            margin-top: 30px;
+        }
+
+        .section-content {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background-color: #e9f5f2;
+            margin-bottom: 5px;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .social-links a {
+            color: #d36e88;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .social-links a:hover {
+            color: #b35a76;
+        }
+
+        .btn {
+            display: block;
+            width: 220px;
+            padding: 12px;
+            margin: 30px auto;
+            background-color: #d36e88;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #b35a76;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #d36e88;
+        }
+
+        .thanks-message {
+            display: none;
+            text-align: center;
+            font-size: 18px;
+            color: #d36e88;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header con la imagen y título -->
+    <div class="profile-header">
+        <img src="ks.jpeg" alt="Foto cientifico de datos">
+        <div>
+            <h2>Karen Valverde</h2>
+            <p><strong>Científico de Datos</strong></p>
+            <p><strong>Correo:</strong> ksvalverdem@gmail.com | <strong>Teléfono:</strong> +593 96 005 7732</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Resumen Profesional -->
+    <div class="section-title">Resumen Profesional</div>
+    <div class="section-content">
+        Profesional apasionado por la ciencia de datos, con experiencia en el desarrollo de modelos predictivos, análisis de grandes volúmenes de datos y la creación de soluciones de inteligencia artificial para mejorar la toma de decisiones.
+    </div>
+
+    <!-- Sección de Educación -->
+    <div class="section-title">Educación</div>
+    <div class="section-content">
+        <strong>Ingeniería en Ciencia de Datos</strong> - Pontificia Universidad Católica del Ecuador (2024-2028)
+    </div>
+
+    <!-- Sección de Experiencia -->
+    <div class="section-title">Experiencia</div>
+    <ul class="skills-list">
+        <li><strong>Investigador Principal</strong>, Empresa X - 2021-2023</li>
+        <li><strong>Desarrollador de Modelos Predictivos</strong>, Empresa Y - 2019-2021</li>
+        <li><strong>Data Analyst</strong>, Empresa Z - 2017-2019</li>
+    </ul>
+
+    <!-- Sección de Habilidades Técnicas -->
+    <div class="section-title">Habilidades Técnicas</div>
+    <ul class="skills-list">
+        <li>Python, R, SQL, Machine Learning</li>
+        <li>TensorFlow, Keras, Scikit-Learn</li>
+        <li>Big Data, Análisis Predictivo</li>
+    </ul>
+
+    <!-- Sección de Proyectos Relevantes -->
+    <div class="section-title">Proyectos Relevantes</div>
+    <div class="section-content">
+        <strong>Modelo Predictivo para Predecir la Demanda de Productos</strong> - Desarrollé un modelo utilizando machine learning para predecir la demanda de productos en función de varios factores de mercado.
+    </div>
+
+    <!-- Botón para ingresar nombre -->
+    <button class="btn" onclick="askName()">Ingresa tu nombre</button>
+
+    <!-- Formulario para ingresar nombre -->
+    <div id="name-form" style="display: none;">
+        <input type="text" id="name-input" class="input-field" placeholder="Tu nombre" required>
+        <button class="btn" onclick="submitName()">Enviar</button>
+    </div>
+
+    <!-- Mensaje de agradecimiento -->
+    <p class="thanks-message" id="thanks-message">¡Gracias por ver mi currículum, <span id="user-name"></span>! Te deseo mucho éxito en tu búsqueda.</p>
+</div>
+
+<script>
+    function askName() {
+        document.querySelector('button').style.display = 'none';
+        document.getElementById('name-form').style.display = 'block';
+    }
+
+    function submitName() {
+        const name = document.getElementById('name-input').value;
+        if (name.trim() !== "") {
+            document.getElementById('user-name').textContent = name;
+            document.getElementById('thanks-message').style.display = 'block';
+            document.getElementById('name-form').style.display = 'none';
+
+            // Enviar el nombre al back-end
+            fetch('/thanks', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name: name })
+            });
+        }
+    }
+</script>
+
+</body>
+</html>
